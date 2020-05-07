@@ -11,5 +11,11 @@
         <module name="self.spring.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="org.example.self.main" target="1.8" />
+      <module name="org.example.self.test" target="1.8" />
+      <module name="org.example.spring.main" target="1.8" />
+      <module name="org.example.spring.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
