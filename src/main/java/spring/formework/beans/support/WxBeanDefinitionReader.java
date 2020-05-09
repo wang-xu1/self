@@ -1,7 +1,8 @@
-package formework.beans.support;
+package spring.formework.beans.support;
 
 
-import formework.beans.config.WxBeanDefinition;
+
+import spring.formework.beans.config.WxBeanDefinition;
 
 import java.io.IOException;
 import java.io.InputStream;

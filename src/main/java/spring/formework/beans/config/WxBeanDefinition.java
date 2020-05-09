@@ -1,4 +1,4 @@
-package formework.beans.config;
+package spring.formework.beans.config;
 
 import lombok.Data;
 

@@ -1,9 +1,10 @@
-package formework.context;
+package spring.formework.context;
 
-import formework.beans.WxBeanFactory;
-import formework.beans.config.WxBeanDefinition;
-import formework.beans.support.WxBeanDefinitionReader;
-import formework.beans.support.WxDefaultListableBeanFactory;
+
+import spring.formework.beans.WxBeanFactory;
+import spring.formework.beans.config.WxBeanDefinition;
+import spring.formework.beans.support.WxBeanDefinitionReader;
+import spring.formework.beans.support.WxDefaultListableBeanFactory;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * Created by xu on 2020/4/21
  */
 public class WxApplicationContext extends WxDefaultListableBeanFactory implements WxBeanFactory {
+
 
 
     public String[] configLoactions;
