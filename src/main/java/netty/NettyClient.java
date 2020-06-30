@@ -5,7 +5,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.string.StringEncoder;
+import netty.handler.client.ClientHandler;
 
 import java.util.Date;
 
@@ -22,13 +22,13 @@ public class NettyClient {
                 .handler(new ChannelInitializer<Channel>() {
                     @Override
                     protected void initChannel(Channel ch) throws Exception {
-                        ch.pipeline().addLast(new StringEncoder());
+                        ch.pipeline().addLast(new ClientHandler());
                     }
                 });
 
         Channel channel = bootstrap.connect("127.0.0.1", 8080).channel();
-        while (true){
-            channel.writeAndFlush(new Date()+": hello world!");
+        while (true) {
+            channel.writeAndFlush(new Date() + ": hello world!");
             Thread.sleep(2000);
         }
 
