@@ -1,3 +1,5 @@
+阅读源码，先猜测，再验证
+
 1.手写spring
    1.1 定位配置文件
    1.2 加载配置文件原数据(xml AND annotation)
@@ -6,7 +8,8 @@
    1.4 初始化bean
          根据beanDefinition实例化bean
          单例 ，原型模式
-   1.5 di注入
+         beanWapper
+   1.5 DI注入
         构造器注入。
         setter注入
         工厂模式注入
