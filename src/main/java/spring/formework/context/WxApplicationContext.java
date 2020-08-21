@@ -101,6 +101,9 @@ public class WxApplicationContext extends WxDefaultListableBeanFactory implement
 
         for (Field field : clazz.getDeclaredFields()) {
 
+            field.setAccessible(true);
+
+
         }
 
 
