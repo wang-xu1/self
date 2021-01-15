@@ -32,20 +32,17 @@ public class WaitTest {
 
 
         for (int i = 0; i <10 ; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            new Thread(()-> {
+
                     waitTest.give(String.valueOf(System.currentTimeMillis()));
-                }
             }).start();
 
         }
 
 
         for (int i = 0; i <10 ; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            new Thread(()->{
+
                     try {
                         String take = waitTest.take();
                         System.out.println("take="+take+",date="+String.valueOf(System.currentTimeMillis()));
@@ -54,7 +51,6 @@ public class WaitTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                }
             }).start();
 
         }
